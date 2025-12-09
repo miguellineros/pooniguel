@@ -4,7 +4,7 @@ from negocio.negocio_aviones import obtener_datos_aviones
 from negocio.negocio_pasajeros import obtener_datos_pasajeros, crear_pasajero, modificar_pasajero, eliminar_pasajero
 from negocio.negocio_aviones import obtener_datos_aviones, crear_avion,modificar_avion,eliminar_avion
 from negocio.negocio_reservas import obtener_datos_reservas, crear_reserva, eliminar_reserva
-from negocio.negocio_vuelo import obtener_datos_vuelos, crear_vuelo, modificar_vuelo, eliminar_vuelo
+from negocio.negocio_vuelos import obtener_datos_vuelos, crear_vuelo, modificar_vuelo, eliminar_vuelo
 from negocio.negocio_localidades import obtener_datos_localidades, crear_localidad, modificar_localidad, eliminar_localidad
 from negocio.negocio_asientos import obtener_datos_asientos, crear_asiento, modificar_asiento, eliminar_asiento
 def menu_principal():
