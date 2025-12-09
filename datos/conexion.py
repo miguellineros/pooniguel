@@ -5,7 +5,7 @@ from mysql.connector import errorcode
 def generar_conexion():
     config = {
         'host': "localhost",
-        'port': 3306,
+        'port': 3307,
         'user': "root",
         'password': "",
         'database': "aerolinea",
@@ -70,3 +70,23 @@ def insertar_datos(consulta,datos,proceso=''):
         else:
             print("Su búsqueda no arrojó resultados...")
         conexion.close()
+        
+# ==========================================
+# ZONA DE PRUEBAS (Pega esto al final del archivo)
+# ==========================================
+
+if __name__ == "__main__":
+    print("--- 🕵️‍♀️ Iniciando prueba de diagnóstico ---")
+    
+    # 1. Intentamos conectar
+    print("Intentando conectar a la base de datos...")
+    con = generar_conexion()
+    
+    if con:
+        print("\n✅ ¡ÉXITO! La conexión se estableció correctamente.")
+        print("El sistema está listo para recibir órdenes.")
+        con.close() # Cerramos para ser ordenados
+    else:
+        print("\n❌ FALLO: No se pudo conectar. Revisa el puerto o el usuario.")
+        
+    print("------------------------------------------")

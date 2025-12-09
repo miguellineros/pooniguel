@@ -1,8 +1,8 @@
 from interfaces.opciones_menu import opciones_menu, opciones_sub_menu,menu_asientos
 from negocio.negocio_aerolineas import obtener_datos_aerolineas,crear_aerolinea,modificar_aerolinea,eliminar_aerolinea
 from negocio.negocio_aviones import obtener_datos_aviones
-from negocio.negocio_pasajeros import obtener_datos_pasajeros, crear_pasajero,modificar_pasajero
-
+from negocio.negocio_pasajeros import obtener_datos_pasajeros, crear_pasajero, modificar_pasajero, eliminar_pasajero
+from negocio.negocio_aviones import obtener_datos_aviones, crear_avion,modificar_avion,eliminar_avion
 
 def menu_principal():
     print('Sistema de Gestión de Aerolínea')
@@ -48,14 +48,14 @@ def menu_principal():
                 opcion_avion = input('Seleccione su opción [0-4]: ')
                 if opcion_avion == '1':
                     obtener_datos_aviones()
-                elif opcion_avion == '2':
-                    pass
-                elif opcion_avion == '3':
-                    pass
-                elif opcion_avion == '4':
-                    pass
-                elif opcion_avion == '0':
-                    print('Volviendo al menú principal...')
+                elif opcion_avion=='2':
+                    crear_avion()    
+                elif opcion_avion=='3':
+                    modificar_avion()  
+                elif opcion_avion== '4':
+                    eliminar_avion()
+                elif opcion_avion =='0':
+                    print('Volviendo al menú principal..')
                     break
                 else:
                     print('Opción incorrecta, intente nuevamente...')
@@ -87,7 +87,7 @@ def menu_principal():
                 elif opcion_pasajero == '3':
                     modificar_pasajero()
                 elif opcion_pasajero == '4':
-                    pass
+                    eliminar_pasajero()
                 elif opcion_pasajero == '0':
                     print('Volviendo al menú principal...')
                     break
