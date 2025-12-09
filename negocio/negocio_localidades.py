@@ -18,7 +18,7 @@ def obtener_datos_localidades():
         if resultado:
             for data in resultado:
                 localidad = Localidad(
-                    data[0], data[1], data[2], data[3])  # type: ignore
+                    data[0], data[1], data[2], data[3])  
                 lista_localidades.append(localidad)
 
         if len(lista_localidades) > 0:

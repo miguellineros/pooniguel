@@ -54,3 +54,19 @@ def pasajero_delete():
         DELETE FROM pasajeros
         WHERE id_pasajero=%s"""
     return consulta
+
+def avion_update():
+    consulta = """
+        UPDATE aviones SET 
+        cod_avion=%s,
+        tipo_avion=%s,
+        capacidad_avion=%s,
+        id_aerolinea=%s
+        WHERE id_avion=%s"""
+    return consulta
+
+def avion_delete():
+    consulta = """
+        DELETE FROM aviones
+        WHERE id_avion=%s"""
+    return consulta
