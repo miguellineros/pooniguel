@@ -32,9 +32,10 @@ def opciones_sub_menu(tipo_menu):
 
 def menu_asientos():
     print()
-    print('Menú Asientos')
-    print('============')
-    print('[1] Listado Asientos.')
-    print('[2] Reservar Asiento.')
-    print('[3] Eliminar Reserva Asiento.')
+    print('Menú Gestión de Asientos (Inventario)')
+    print('=====================================')
+    print('[1] Listado de Asientos.')
+    print('[2] Crear/Agregar Asiento a Vuelo.')
+    print('[3] Modificar Asiento.')
+    print('[4] Eliminar Asiento.')
     print('[0] Volver al menú principal.')

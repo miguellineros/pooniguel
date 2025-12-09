@@ -5,7 +5,8 @@ from negocio.negocio_pasajeros import obtener_datos_pasajeros, crear_pasajero, m
 from negocio.negocio_aviones import obtener_datos_aviones, crear_avion,modificar_avion,eliminar_avion
 from negocio.negocio_reservas import obtener_datos_reservas, crear_reserva, eliminar_reserva
 from negocio.negocio_vuelo import obtener_datos_vuelos, crear_vuelo, modificar_vuelo, eliminar_vuelo
-
+from negocio.negocio_localidades import obtener_datos_localidades, crear_localidad, modificar_localidad, eliminar_localidad
+from negocio.negocio_asientos import obtener_datos_asientos, crear_asiento, modificar_asiento, eliminar_asiento
 def menu_principal():
     print('Sistema de Gestión de Aerolínea')
     print('===============================')
@@ -34,11 +35,13 @@ def menu_principal():
                 menu_asientos()
                 opcion_asiento = input('Seleccione su opción [0-4]: ')
                 if opcion_asiento == '1':
-                    pass
+                    obtener_datos_asientos()
                 elif opcion_asiento == '2':
-                    pass
+                    crear_asiento()
                 elif opcion_asiento == '3':
-                    pass
+                    modificar_asiento()
+                elif opcion_asiento == '4':
+                    eliminar_asiento()
                 elif opcion_asiento == '0':
                     print('Volviendo al menú principal...')
                     break
@@ -66,18 +69,18 @@ def menu_principal():
                 opciones_sub_menu('Localidad')
                 opcion_localidad = input('Seleccione su opción [0-4]: ')
                 if opcion_localidad == '1':
-                    pass
+                    obtener_datos_localidades()
                 elif opcion_localidad == '2':
-                    pass
+                    crear_localidad()
                 elif opcion_localidad == '3':
-                    pass
+                    modificar_localidad()
                 elif opcion_localidad == '4':
-                    pass
+                    eliminar_localidad()
                 elif opcion_localidad == '0':
                     print('Volviendo al menú principal...')
                     break
                 else:
-                    print('Opción incorrecta, intente nuevamente...')
+                    print('Opción incorrecta, intente nuevamente...')      
         elif opcion == '5':
             while True:
                 opciones_sub_menu('Pasajero')

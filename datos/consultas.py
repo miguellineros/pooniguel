@@ -101,3 +101,39 @@ def vuelo_update():
 def vuelo_delete():
     consulta = "DELETE FROM vuelos WHERE id_vuelo=%s"
     return consulta
+
+
+def localidad_update():
+    consulta = """
+        UPDATE localidades SET 
+        nombre_localidad=%s,
+        latitud=%s,
+        longitud=%s
+        WHERE id_localidad=%s"""
+    return consulta
+
+def localidad_delete():
+    consulta = "DELETE FROM localidades WHERE id_localidad=%s"
+    return consulta
+
+
+def consulta_select_asientos_vuelo():
+    consulta = """
+        SELECT a.id_asiento, v.cod_vuelo, a.num_asiento, a.categoria 
+        FROM asientos a
+        JOIN vuelos v ON a.id_vuelo = v.id_vuelo
+        ORDER BY v.cod_vuelo, a.num_asiento
+    """
+    return consulta
+
+def asiento_update():
+    consulta = """
+        UPDATE asientos SET 
+        num_asiento=%s,
+        categoria=%s,
+        id_vuelo=%s
+        WHERE id_asiento=%s"""
+    return consulta
+def asiento_delete():
+    consulta = "DELETE FROM asientos WHERE id_asiento=%s"
+    return consulta
