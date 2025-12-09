@@ -70,3 +70,34 @@ def avion_delete():
         DELETE FROM aviones
         WHERE id_avion=%s"""
     return consulta
+
+def consulta_reservas_general():
+    consulta = """
+        SELECT r.id_reserva, p.nombre_pasajero, p.num_pasaporte, a.num_asiento, v.cod_vuelo 
+        FROM reservas r 
+        JOIN pasajeros p ON r.id_pasajero = p.id_pasajero 
+        JOIN asientos a ON r.id_asiento = a.id_asiento
+        JOIN vuelos v ON a.id_vuelo = v.id_vuelo
+        ORDER BY r.id_reserva
+    """
+    return consulta
+
+def reserva_delete():
+    consulta = "DELETE FROM reservas WHERE id_reserva=%s"
+    return consulta
+
+def vuelo_update():
+    consulta = """
+        UPDATE vuelos SET 
+        fecha_hora_salida=%s,
+        destino=%s,
+        origen=%s,
+        cod_vuelo=%s,
+        id_avion=%s,
+        tipo_vuelo=%s
+        WHERE id_vuelo=%s"""
+    return consulta
+
+def vuelo_delete():
+    consulta = "DELETE FROM vuelos WHERE id_vuelo=%s"
+    return consulta

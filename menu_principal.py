@@ -3,6 +3,8 @@ from negocio.negocio_aerolineas import obtener_datos_aerolineas,crear_aerolinea,
 from negocio.negocio_aviones import obtener_datos_aviones
 from negocio.negocio_pasajeros import obtener_datos_pasajeros, crear_pasajero, modificar_pasajero, eliminar_pasajero
 from negocio.negocio_aviones import obtener_datos_aviones, crear_avion,modificar_avion,eliminar_avion
+from negocio.negocio_reservas import obtener_datos_reservas, crear_reserva, eliminar_reserva
+from negocio.negocio_vuelo import obtener_datos_vuelos, crear_vuelo, modificar_vuelo, eliminar_vuelo
 
 def menu_principal():
     print('Sistema de Gestión de Aerolínea')
@@ -98,14 +100,14 @@ def menu_principal():
                 opciones_sub_menu('Reserva')
                 opcion_reserva = input('Seleccione su opción [0-4]: ')
                 if opcion_reserva == '1':
-                    pass
+                    obtener_datos_reservas()
                 elif opcion_reserva == '2':
-                    pass
-                elif opcion_reserva == '3':
-                    pass
-                elif opcion_reserva == '4':
-                    pass
-                elif opcion_reserva == '0':
+                    crear_reserva()
+                elif opcion_reserva=='3':
+                    print("Modificar reserva no implementado")
+                elif opcion_reserva=='4':
+                    eliminar_reserva()
+                elif opcion_reserva=='0':
                     print('Volviendo al menú principal...')
                     break
                 else:
@@ -115,13 +117,13 @@ def menu_principal():
                 opciones_sub_menu('Vuelo')
                 opcion_vuelo = input('Seleccione su opción [0-4]: ')
                 if opcion_vuelo == '1':
-                    pass
+                    obtener_datos_vuelos()
                 elif opcion_vuelo == '2':
-                    pass
+                    crear_vuelo()
                 elif opcion_vuelo == '3':
-                    pass
+                    modificar_vuelo()
                 elif opcion_vuelo == '4':
-                    pass
+                    eliminar_vuelo()
                 elif opcion_vuelo == '0':
                     print('Volviendo al menú principal...')
                     break
