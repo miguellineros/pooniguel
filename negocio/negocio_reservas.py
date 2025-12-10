@@ -19,7 +19,7 @@ def obtener_datos_reservas():
 
 def crear_reserva():
     print("\Crear nueva reserva ")
-    #n/litas
+   
     print("Lista de Pasajeros ")
     obtener_datos_pasajeros()
     id_pasajero=input('Ingrese el ID del Pasajero: ')

@@ -31,7 +31,7 @@ def obtener_datos_aviones():
         print(tabla_aviones)
 
 def crear_avion():
-    print("\nCreando Nuevo Avion")
+    print("Creando Nuevo Avion")
     codigo =input('Ingrese Codigo del Avion (ej: AV-99):')
     
     print("\nTipos de Avion: [1] Carga | [2] Pasajeros")

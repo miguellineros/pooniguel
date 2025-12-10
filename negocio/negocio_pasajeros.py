@@ -31,7 +31,7 @@ def obtener_datos_pasajeros():
 
 
 def crear_pasajero():
-    print("\n Registrar Nuevo pasajero")
+    print("Registrar Nuevo pasajero")
     campos='nombre_pasajero,num_pasaporte,fecha_nacimiento'
     tabla='pasajeros'
     nombre=input('Ingrese Nombre Pasajero: ')

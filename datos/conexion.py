@@ -1,15 +1,15 @@
 import mysql.connector
 from mysql.connector import errorcode
-
+from auxiliares.data_aplicacion import host,port,user,password,database,use_pure
 
 def generar_conexion():
     config = {
-        'host': "localhost",
-        'port': 3307,
-        'user': "root",
-        'password': "",
-        'database': "aerolinea",
-        'use_pure': True
+        'host': host,
+        'port': port,
+        'user':user,
+        'password': password,
+        'database': database,
+        'use_pure': use_pure
     }
     try:
         conexion = mysql.connector.connect(**config)
